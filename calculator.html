@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+    <!-- bagian header template -->
+    <header class="judul">
+        <h1>Calculator Harga</h1>
+        <h1>PT Pupuk Kalimantan Timur</h1>
+
+    </header>
+
+    <div class="main">
+        <div class="perkalian">
+            <h3>Perkalian</h3>
+            <div>
+                <table>
+                    <tr>
+                        <td>
+                            <p>Jumlah Kuantum (Ton)</p>
+                            <p>Harga</p>
+                            <p>Total Nilai</p>
+                        </td>
+                        <td>
+                            <p>:</p>
+                            <p>:</p>
+                            <p>:</p>
+                        </td>
+                        <td>
+                            <p> <input id="angkaatas1" type="text" name="angkaatas1"></p>
+                            <p> Rp.<input id="angkabawah1" type="text" name="angkabawah1"></p>
+                            <p> Rp.<input id="hasil1" type="text" name="hasil1" readonly></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <input type="submit" onclick="javascript:perkalian();" value="Hitung">
+                            <input type="submit" onclick="javascript:perkalian();" value="Hitung">
+                        </td>
+                        <script>
+                            function perkalian() {
+                                var x1 = parseInt(document.getElementById('angkaatas1').value);
+                                var y1 = parseInt(document.getElementById('angkabawah1').value);
+                                var hasil = document.getElementById('hasil1');
+                                var total;
+                                if (isNaN(x1)) {
+                                    alert('isi Kuantum dengan angka!')
+                                } else if (isNaN(y1)) {
+                                    alert('isi Harga dengan angka!')
+                                } else {
+                                    total = x1 * y1;
+                                }
+                                hasil1.value = total;
+                            }
+                        </script>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="perjumlahan">
+            <h3>Perjumlahan</h3>
+            <div>
+                <table>
+                    <tr>
+                        <td>
+                            <p>Jumlah Kuantum (Ton)</p>
+                            <p>Harga</p>
+                            <p>Total Nilai</p>
+                        </td>
+                        <td>
+                            <p>:</p>
+                            <p>:</p>
+                            <p>:</p>
+                        </td>
+                        <td>
+                            <p> <input type="text" name="angkaatas1"></p>
+                            <p> Rp.<input type="text" name="angkabawah1"></p>
+                            <p> Rp.<input type="text" name="hasil1" readonly></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><button>Calculate</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</html>
